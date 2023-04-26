@@ -1,0 +1,32 @@
+@import 'variables';
+@import 'mixins';
+
+header{
+  @include display(flex);
+  align-items:center;
+  width:100%;
+  justify-content:space-between;
+}
+.header__left{
+  @include display(inline-flex);
+  align-items:center;
+}
+.logo em{
+  color:$color-E47C29;
+}
+.live{
+  background-color:$color-FF4848;
+  @include display(flex);
+  align-items:center;
+  min-width:56px;
+  &::before{
+    content:'';
+    height:8px;
+    width:8px;
+    @include border-radius(50%);
+    background-color:$color-ffffff;
+    @extend .mr-5;
+  }
+}
+
+

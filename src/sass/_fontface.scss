@@ -1,0 +1,23 @@
+
+// Roboto font
+@font-face {
+    font-family:'Archivo';
+    src: url(../assets/fonts/archivo/Archivo_Condensed-Regular.woff2) format('woff2'),
+         url(../assets/fonts/archivo/Archivo_Condensed-Regular.woff) format('woff'),
+         url(../assets/fonts/archivo/Archivo_Condensed-Regular.ttf) format('truetype');
+    font-weight:400;
+}
+@font-face {
+    font-family:'Archivo';
+    src: url(../assets/fonts/archivo/Archivo_Condensed-Medium.woff2) format('woff2'),
+         url(../assets/fonts/archivo/Archivo_Condensed-Medium.woff) format('woff'),
+         url(../assets/fonts/archivo/Archivo_Condensed-Medium.ttf) format('truetype');
+    font-weight:500;
+}
+@font-face {
+    font-family:'Archivo';
+    src: url(../assets/fonts/archivo/Archivo_Condensed-SemiBold.woff2) format('woff2'),
+         url(../assets/fonts/archivo/Archivo_Condensed-SemiBold.woff) format('woff'),
+         url(../assets/fonts/archivo/Archivo_Condensed-SemiBold.ttf) format('truetype');
+    font-weight:600;
+}

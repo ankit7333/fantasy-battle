@@ -1,0 +1,95 @@
+@import 'variables';
+@import 'mixins';
+
+.point{
+  @include display(flex);
+  align-items:center;
+  justify-content:space-evenly;
+  flex-direction:row;
+  &__left, &__right{
+    @include display(flex);
+    >span{
+      @include display(flex);
+      flex-direction:column;
+    }
+  }
+  &__right{
+    flex-direction:row-reverse;
+  }
+  &__middle{
+    min-width:102px;
+    background-color:$color-012C36;
+    height:36px;
+    @include border-radius(4px);
+    @include display(flex);
+    align-items:center;
+    justify-content:center;
+  }
+  &__table{
+    @include display(flex);
+    justify-content:space-between;
+    gap:0 10px;
+    .player{
+      &__box{
+        width:100%;
+        @include display(flex);
+        align-items:center;
+        justify-content:space-between;
+        &--left{
+          @include display(flex);
+          align-items:center;
+        }
+        .imgwrap{
+          width:46px;
+          height:53px;
+          position:relative;
+          overflow:hidden;
+          @include border-radius(4px);
+          &::after{
+            content:'';
+            height:100%;
+            width:100%;
+            background:linear-gradient(180deg, $color-ffffff 10.73%, rgba(255, 255, 255, 0) 43.65%);
+            @include position(absolute, $left:0, $top:0, $right:0, $bottom:0);
+            transform:rotate(180deg);
+          }
+        }
+        &::after{
+          @include display(none);
+        }
+      }
+      &__bg{
+        object-fit:contain;
+      }
+    }
+  }
+}
+.imagetext{
+  @include display(flex);
+  flex-direction:column;
+  .playerlabel{
+    @include border-radius(14px);
+    background-color:$color-000000;
+    height:11px;
+    min-width:50px;
+    @include display(flex);
+    align-items:center;
+    justify-content:center;
+  }
+}
+.points{
+  color:$color-00B1DB;
+}
+.table__left, .table__right{
+  flex:1 1 50%;
+}
+.table__right{
+  border-left:1px solid $color-ffffff;
+  .player__box{
+    flex-direction:row-reverse;
+    text-align:right;
+    &--left{
+      flex-direction:row-reverse;
+    }
+  }
+}

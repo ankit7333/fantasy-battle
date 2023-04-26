@@ -1,0 +1,244 @@
+@import 'variables';
+@import 'mixins';
+
+.team{
+  @include display(flex);
+  justify-content:space-around;
+  li{
+    @include display(inline-flex);
+    align-items:center;
+    &:last-child{
+      flex-direction:row-reverse;
+    }
+  }
+  &__bg{
+    height:27px;
+    width:27px;
+    background-color:$color-ffffff;
+    border:0.5px solid $color-D9D9D9;
+    @include border-radius(50%);
+    @include display(inline-flex);
+    align-items:center;
+    justify-content:center;
+  }
+  &__flag{
+    &--dc{
+      height:18px;
+      width:18px;
+    }
+    &--mi{
+      height:12px;
+      width:19px;
+    }
+  }
+}
+.vstext{
+  height:17px;
+  width:17px;
+  background-color:$color-024B5C;
+  @include border-radius(50%);
+  line-height:17px;
+  position:relative;
+  &::before, &::after{
+    @include position(absolute, $left:-10px, $top:50%);
+    content:'';
+    background-color:$color-024B5C;
+    height:1px;
+    width:100%;
+    z-index:-1;
+    margin-top:-0.5px;
+  }
+  &::after{
+    @include position(absolute, $left:unset, $right:-10px);
+  }
+}
+.player{
+  @include display(flex);
+  align-items:center;
+  gap:5px;
+  &__box{
+    background-color:$color-002947;
+    @include border-radius(5px);
+    height:53px;
+    width:46px;
+    position:relative;
+    flex:1 1 46px;
+    overflow:hidden;
+    @include display(inline-flex);
+    align-items:center;
+    justify-content:center;
+    @include for-ipad{
+      height:85px;
+    }
+    &.no--image{
+      &::after{
+        @include display(none);
+      }
+    }
+    &::after{
+      content:'';
+      height:100%;
+      width:100%;
+      background:linear-gradient(180deg, $color-ffffff 10.73%, rgba(255, 255, 255, 0) 43.65%);
+      @include position(absolute, $left:0, $top:0, $right:0, $bottom:0);
+      transform:rotate(180deg);
+    }
+  }
+  &__bg{
+    background-color:$color-ffffff;
+    @include border-radius(5px);
+    object-fit:cover;
+  }
+  &__flag{
+    height:10px;
+    width:15px;
+    @include border-radius(.83px);
+    border:0.21px solid $color-D9D9D9;
+    background-color:$color-ffffff;
+    @include position(absolute, $left:5px, $bottom:5px);
+    z-index:1;
+    &--dc{
+      background-image:url(../assets/images/delhi_capital.svg);
+      background-size:8px 8px;
+    }
+    &--mi{
+      background-image:url(../assets/images/mumbai_indian.svg);
+    }
+  }
+  &__bottom{
+    @include display(flex);
+    align-items:center;
+    justify-content:space-between;
+  }
+}
+.count{
+  align-items:baseline;
+  strong{
+    text-transform:uppercase;
+    @extend .font16;
+    font-weight:700;
+  }
+}
+.si, .sh{
+  height:26px;
+  width:26px;
+  @include border-radius(50%);
+  background-color:$color-3D65B2;
+  border:1px solid $color-82ABFA;
+  @include display(flex);
+  align-items:center;
+  justify-content:center;
+  &__team{
+    @include display(flex);
+    align-items:center;
+  }
+}
+.sh{
+  background-color:$color-20BEB5;
+  border-color:$color-0D8780;
+}
+.team--your{
+  flex-direction:column-reverse;
+  .player__bottom, .si__team, .player{
+    flex-direction:row-reverse;
+  }
+}
+.ground{
+  background-image:linear-gradient(to right, $color-1E6413, $color-2A711F, $color-1E6413, $color-2A711F, $color-1E6413, $color-2A711F, $color-1E6413, $color-2A711F, $color-1E6413, $color-2A711F, $color-1E6413, $color-2A711F);
+  height:183px;
+  width:100%;
+  position:relative;
+  @include display(flex);
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  &__inner{
+    @include display(flex);
+    align-items:center;
+    justify-content:space-around;
+    width:100%;
+    .question{
+      position:absolute;
+      background-color:transparent;
+      color:$color-00B1DB;
+    }
+    figcaption{
+      @include display(flex);
+      flex-direction:column;
+      @include position(absolute, $left:6px, $bottom:6px);
+      z-index:1;
+    }
+    .player{
+      &__box{
+        height:140px;
+        width:105px;
+        flex:0 0 105px;
+        @include display(flex);
+        align-items:center;
+        justify-content:center;
+        flex-direction:column;
+      }
+      &__flag{
+        height:12px;
+        width:18px;
+        @include position(absolute, $left:6px, $top:6px);
+      }
+      &__bg{
+        @extend .p-10;
+      }
+      &__name, &__surname{
+        color:$color-002947;
+        text-transform:uppercase;
+      }
+    }
+  }
+}
+.batsman{
+  background-color:$color-024B5C;
+  @include border-radius(14px);
+  @extend .pt-2, .pb-2, .pl-10, .pr-10, .mt-3;
+}
+.pitch{
+  background-image:url(../assets/images/pitch.png);
+  background-repeat:no-repeat;
+  background-position:center;
+  height:72px;
+  width:250px;
+  opacity:.5;
+  position:absolute;
+}
+.circle{
+  background-color:$color-003152;
+  @include border-radius(50%);
+  @include display(flex);
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  top:-12px;
+  background-image:url(../assets/images/balldesign.svg);
+  background-repeat:no-repeat;
+  background-size:80% 80%;
+  background-position:4px 5px;
+}
+.unknownplayer{
+  background-color:$color-ffffff;
+  &::before{
+    z-index:1;
+    border:1px solid $color-00B1DB;
+    @include border-radius(5px);
+    content:'';
+    display: block;
+    @include position(absolute, $left:3px, $top:3px, $right:3px, $bottom:3px);
+  }
+}
+.question{
+  height:25px;
+  width:25px;
+  background-color:$color-00B1DB;
+  @include border-radius(50%);
+  @include display(flex);
+  flex-basis:25px;
+  align-items:center;
+  justify-content:center;
+}

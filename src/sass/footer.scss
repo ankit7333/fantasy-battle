@@ -1,0 +1,15 @@
+@import 'variables';
+@import 'mixins';
+
+footer{
+  @include display(flex);
+  align-items:center;
+  justify-content:center;
+  p{
+    opacity:.6;
+    @extend .m-0;
+    line-height:13px;
+  }
+}
+
+

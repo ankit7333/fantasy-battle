@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=6; IE=EDGE" />
+        <meta name="format-detection" content="telephone=no" />
+        <title>Fantasy Battle</title>
+		<link href="/css/globals.css" type="text/css" rel="stylesheet" />
+		<link href="/css/header.css" type="text/css" rel="stylesheet" />
+		<link href="/css/footer.css" type="text/css" rel="stylesheet" />
+		<link href="/css/home.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<section class="container">
+			<!-- header section -->
+			<header class="p-10">
+				<div class="header__left">
+					<button class="iconwrap backicon"></button>
+					<a href="#" class="logo fw600 font20 ml-20">Fantasy <em>Battle</em></a>
+				</div>
+				<div>
+					<span class="box__inner p-5 font12">1h 26m Left</span>
+				</div>
+			</header>
+			<main class="mt-30">
+				<!-- team vs section -->
+				<ul class="team">
+					<li>
+						<span class="team__name mr-10">DC</span>
+						<span class="team__bg">
+							<img class="team__flag team__flag--dc" src="../assets/images/delhi_capital.svg" alt="delhi capital" />
+						</span>
+					</li>
+					<li>
+						<span class="vstext fw500 font8 text__center">VS</span>
+					</li>
+					<li>
+						<span class="team__name ml-10">MI</span>
+						<span class="team__bg">
+							<img class="team__flag team__flag--mi" src="../assets/images/mumbai_indian.svg" alt="delhi capital" />
+						</span>
+					</li>
+				</ul>
+				<!-- oponent team -->
+				<div class="box mt-20 team--other">
+					<div class="player">
+						<figure class="player__box no--image"></figure>
+						<figure class="player__box no--image unknownplayer">
+							<span class="question font20 fw700">?</span>
+						</figure>
+						<figure class="player__box no--image unknownplayer">
+							<span class="question font20 fw700">?</span>
+						</figure>
+						<figure class="player__box no--image unknownplayer">
+							<span class="question font20 fw700">?</span>
+						</figure>
+						<figure class="player__box">
+							<img class="player__bg" src="../assets/images/a_rahane.png" alt="Ajinkya Rahane" />
+							<span class="player__flag iconwrap player__flag--dc"></span>
+						</figure>
+						<figure class="player__box">
+							<img class="player__bg" src="../assets/images/tiwari.png" alt="Saurabh Tiwari" />
+							<span class="player__flag iconwrap player__flag--mi"></span>
+						</figure>
+					</div>
+					<div class="player__bottom mt-15">
+						<span class="count box__inner p-5 font10"><strong>2</strong>/3 Yet to Play</span>
+						<span class="si__team">
+							<span>Simran’s Team</span>
+							<span class="si ml-10">SI</span>
+						</span>
+					</div>
+				</div>
+				<!-- choose player for your team -->
+				<div class="ground mt-20">
+					<p class="subtitle">Choose a player for your team</p>
+					<div class="pitch"></div>
+					<div class="ground__inner">
+						<figure class="player__box unknownplayer">
+							<img class="player__bg" src="../assets/images/unknown.png" alt="unknown" />
+						</figure>
+						<span class="circle">
+							<svg width="52" height="52" viewBox="0 0 60 60">
+								<circle cx="30" cy="30" r="28" stroke-width="4px" style="fill: none; stroke:#003152;"></circle>
+								<circle cx="30" cy="30" r="28" stroke-width="4px" style="fill: none; stroke:#00B1DB; stroke-linecap: round; stroke-linejoin: round; animation: circle-chart-fill 1s reverse; transform: rotate(-90deg); transform-origin: center center 0px; stroke-dasharray: 175.929; stroke-dashoffset: 90;transition: all 1s;"></circle>
+								<text x="50%" y="50%" dy=".3em" text-anchor="middle" style="font-size: 1.4em; font-weight: 500; fill:#ffffff;">29 Sec</text>
+							</svg>
+						</span>
+						<figure class="player__box unknownplayer">
+							<img class="player__bg" src="../assets/images/unknown.png" alt="unknown" />
+							<span class="fw700 font30 question">?</span>
+						</figure>
+					</div>
+				</div>
+				<!-- your team -->
+				<div class="box mt-20 team--your">
+					<div class="player">
+						<figure class="player__box no--image"></figure>
+						<figure class="player__box no--image unknownplayer">
+							<span class="question font20 fw700">?</span>
+						</figure>
+						<figure class="player__box no--image unknownplayer">
+							<span class="question font20 fw700">?</span>
+						</figure>
+						<figure class="player__box no--image unknownplayer">
+							<span class="question font20 fw700">?</span>
+						</figure>
+						<figure class="player__box">
+							<img class="player__bg" src="../assets/images/s_kumar.png" alt="Surya Kumar Yadav" />
+							<span class="player__flag iconwrap player__flag--mi"></span>
+						</figure>
+						<figure class="player__box">
+							<img class="player__bg" src="../assets/images/r_dhawan.png" alt="Shikhar Dhawan" />
+							<span class="player__flag iconwrap player__flag--dc"></span>
+						</figure>
+					</div>
+					<div class="player__bottom mb-15">
+						<span class="count box__inner p-5 font10">Waiting</span>
+						<span class="si__team">
+							<span>Your Team</span>
+							<span class="sh mr-10">SH</span>
+						</span>
+					</div>
+				</div>
+			</main>
+			<footer class="text__center pt-20 pb-20 pl-10 pr-10">
+				<p class="fw500">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+			</footer>
+		</section>
+	</body>
+</html>
